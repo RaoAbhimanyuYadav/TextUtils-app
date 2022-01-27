@@ -17,16 +17,11 @@ function App() {
       setMode ('dark')
       document.body.style.backgroundColor = '#212529eb';
       showAlert("Dark Mode has been enabled","success");
-      document.title = 'TextUtils-DarkMode'
     }
     else{
       setMode ( 'light')
       document.body.style.backgroundColor = 'white';
       showAlert("Light Mode has been enabled","success");
-      document.title = 'TextUtils Home'
-      setInterval(() => {
-        document.title = 'Download TextUtils now '
-      }, 2000);
     }
   }
   const [alert, setAlert] = useState(null);
