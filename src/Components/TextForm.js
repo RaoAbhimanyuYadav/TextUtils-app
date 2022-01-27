@@ -19,11 +19,11 @@ export default function TextForm(props) {
   const handleClear = () => {
     setText('');
   };
-  // const handleCopy= ()=>{
-  //   let text= document.getElemId("exampleFormControlTextarea1");
-  //   text.select();
-  //   navigator.clipboard.writeText(text.value);
-  // }
+  const handleCopy= ()=>{
+    let text= document.getElemId("exampleFormControlTextarea1");
+    text.select();
+    navigator.clipboard.writeText(text.value);
+  }
   const handleFormat = () => {
     let tarray = text.split(".");
     let tstr = '';
@@ -50,15 +50,16 @@ export default function TextForm(props) {
       <h1>{props.heading} </h1>
       <textarea  className="form-control"  value={text}  id="exampleFormControlTextarea1"  rows="8"  onChange={handleOnChange} style= {{backgroundColor : props.mode==='dark'?'#212529f5':'white', color : props.mode ==='dark'?'white':'#212529'}} ></textarea>{/*execute when u type in textarea*/} 
       <button    className="btn btn-primary mx-2"    onClick={upperCase}  >    To Upper Case  </button> {/*run upperCase function on clicking button*/} 
-      <button   className="btn btn-primary mx-2"   onClick={lowerCase} >   To Lower Case </button>
-      <button   className="btn btn-primary mx-2"   onClick={handleClear} >   Clear </button>
-      <button   className="btn btn-primary mx-2"   onClick={handleFormat} >   Format </button>
-      {/* <button   className="btn btn-primary mx-2"   onClick={handleCopy} >   Copy </button> */}
+      <button   className="btn btn-primary mx-1 my-1"   onClick={lowerCase} >   To Lower Case </button>
+      <button   className="btn btn-primary mx-1 my-1"   onClick={handleClear} >   Clear </button>
+      <button   className="btn btn-primary mx-1 my-1"   onClick={handleFormat} >   Format </button>
+      <button   className="btn btn-primary mx-1 my-1"   onClick={handleCopy} >   Copy </button>
     </div>
     <div className="container my-3" style= {{color : props.mode ==='dark'?'white':'#212529'}} >
       <h3>Your text summary</h3>
-      <p>Number of words are {text.split(" ").length} and characters are {text.length}</p>
-      <p>Time to read the text will be {0.08 * text.split(" ").length} minutes</p>
+      <p>Number of words are {text.split(" ").filter((element)=>  {return element.length!==0}).length} and characters are {text.length}</p>
+      {/* filter(function) and the function output tell filter to set that as output */}
+      <p>Time to read the text will be {0.08 * text.split(" ").filter((element)=>  {return element.length!==0}).length} minutes</p>
     </div>
     </>
   );
