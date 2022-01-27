@@ -1,6 +1,11 @@
 import React, { useState } from "react";
 
 export default function TextForm(props) {
+  const handleExtraSpaces = ()=>{
+    let newText = text.split(/[ ]+/);
+    setText(newText.join(" "));
+    props.showAlert("Extra spaces removed!","success")
+}
   const upperCase = () => {
     let newText = text.toUpperCase();
     setText(newText);
@@ -52,6 +57,7 @@ export default function TextForm(props) {
       <button  disabled= {text.length===0} className="btn btn-primary mx-1 my-1"   onClick={handleClear} >   Clear </button>
       <button  disabled= {text.length===0} className="btn btn-primary mx-1 my-1"   onClick={handleFormat} >   Format </button>
       <button  disabled= {text.length===0} className="btn btn-primary mx-1 my-1"   onClick={handleCopy} >   Copy </button>
+      <button  disabled= {text.length===0} className="btn btn-primary mx-1 my-1"   onClick={handleExtraSpaces} >   Remove extra Spaces </button>
     </div>
     <div className="container my-3" style= {{color : props.mode ==='dark'?'white':'#212529'}} >
       <h3>Your text summary</h3>
