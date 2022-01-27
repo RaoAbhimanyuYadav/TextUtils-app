@@ -28,10 +28,10 @@ export default function NavBar(props) {
             <input className="form-check-input" onClick = {props.toggleMode} type="checkbox" role="switch" id="flexSwitchCheckDefault" />
             <label className="form-check-label" htmlFor="flexSwitchCheckDefault">DarkMode</label>
           </div>
-          <form className="d-flex">
+          {/* <form className="d-flex">
             <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
             <button className="btn btn-primary" type="submit">Search</button>
-          </form>
+          </form> */}
         </div>
       </div>
     </nav>

@@ -19,11 +19,11 @@ export default function TextForm(props) {
   const handleClear = () => {
     setText('');
   };
-  const handleCopy= ()=>{
-    let text= document.getElemId("exampleFormControlTextarea1");
-    text.select();
-    navigator.clipboard.writeText(text.value);
-  }
+  // const handleCopy= ()=>{
+  //   let text= document.getElemId("exampleFormControlTextarea1");
+  //   text.select();
+  //   navigator.clipboard.writeText(text.value);
+  // }
   const handleFormat = () => {
     let tarray = text.split(".");
     let tstr = '';
@@ -53,7 +53,7 @@ export default function TextForm(props) {
       <button   className="btn btn-primary mx-2"   onClick={lowerCase} >   To Lower Case </button>
       <button   className="btn btn-primary mx-2"   onClick={handleClear} >   Clear </button>
       <button   className="btn btn-primary mx-2"   onClick={handleFormat} >   Format </button>
-      <button   className="btn btn-primary mx-2"   onClick={handleCopy} >   Copy </button>
+      {/* <button   className="btn btn-primary mx-2"   onClick={handleCopy} >   Copy </button> */}
     </div>
     <div className="container my-3" style= {{color : props.mode ==='dark'?'white':'#212529'}} >
       <h3>Your text summary</h3>
