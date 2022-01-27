@@ -1,14 +1,14 @@
 import "./App.css";
-// import About from "./Components/About";
+import About from "./Components/About";
 import NavBar from "./Components/NavBar";
 import TextForm from "./Components/TextForm";
 import React, {useState } from 'react';
 import Alert from "./Components/Alert";
-// import {
-//   BrowserRouter as Router,
-//   Switch,
-//   Route
-// } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route
+} from "react-router-dom";
 
 function App() {
   const [mode, setMode] = useState('light');
@@ -43,18 +43,18 @@ function App() {
   }
   return (
     <>
-      {/* <Router> */}
+      <Router>
       <NavBar title='TextUtils'  mode={mode} toggleMode= {toggleMode}  />
       <Alert alert={alert}/>
-        {/* <Switch> */}
-            {/* <Route exact path="/about"> */}
-              {/* <About /> */}
-     {/*        </Route> */}
-            {/*  <Route exact path="/"> */}
+        <Switch>
+            <Route exact path="/about">
+              <About />
+            </Route>
+             <Route exact path="/">
               <TextForm heading="Write your text below" mode={mode} showAlert={showAlert}/>
-            {/* </Route> */}
-        {/* </Switch> */}
-      {/*  </Router> */}
+            </Route>
+        </Switch>
+       </Router>
     </>
   );
 }
