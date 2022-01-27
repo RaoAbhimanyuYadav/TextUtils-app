@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/TextUtils-app/static/css/main.d1b05096.chunk.css",
+    "main.js": "/TextUtils-app/static/js/main.55b1ea09.chunk.js",
+    "main.js.map": "/TextUtils-app/static/js/main.55b1ea09.chunk.js.map",
+    "runtime~main.js": "/TextUtils-app/static/js/runtime~main.cde59786.js",
+    "runtime~main.js.map": "/TextUtils-app/static/js/runtime~main.cde59786.js.map",
+    "static/js/2.624f555d.chunk.js": "/TextUtils-app/static/js/2.624f555d.chunk.js",
+    "static/js/2.624f555d.chunk.js.map": "/TextUtils-app/static/js/2.624f555d.chunk.js.map",
+    "static/js/3.4183067e.chunk.js": "/TextUtils-app/static/js/3.4183067e.chunk.js",
+    "static/js/3.4183067e.chunk.js.map": "/TextUtils-app/static/js/3.4183067e.chunk.js.map",
+    "index.html": "/TextUtils-app/index.html",
+    "precache-manifest.98c784e95de08eb0c4ced2abae855319.js": "/TextUtils-app/precache-manifest.98c784e95de08eb0c4ced2abae855319.js",
+    "service-worker.js": "/TextUtils-app/service-worker.js",
+    "static/css/main.d1b05096.chunk.css.map": "/TextUtils-app/static/css/main.d1b05096.chunk.css.map"
+  }
+}
